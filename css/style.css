@@ -35,5 +35,28 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.wrap {
+.wrap, .footer__wrap {
+  padding: 0 2rem;
+}
+
+.footer__wrap {
+  background: #F1F1F1;
+}
+
+.header, .content, .footer {
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 50rem) {
+  .header, .content, .footer {
+    max-width: 45rem;
+  }
+}
+
+@media (min-width: 75rem) {
+  .header, .content, .footer {
+    margin: 0 auto;
+    max-width: 64rem;
+  }
 }
