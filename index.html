@@ -22,11 +22,11 @@
   <div class="wrap">
     <header class="header">
       <a href="/">
-        <img width="200" height="42" src="./assets/logo.svg" alt="">
+        <img width="200" height="42" src="./assets/logo.svg" alt="Логотип пушкинского музея">
       </a>
-      <form action="/search/" method="GET" role="search">
-        <input type="search" name="q">
-        <button aria-label="Искать">
+      <form class="header__search" action="/search/" method="GET" role="search">
+        <input class="header__search-field" type="search" name="q">
+        <button class="header__search-submit" aria-label="Искать">
           <svg width="48" height="48"><use xlink:href="#icon-search"></use></svg>
         </button>
       </form>
@@ -46,22 +46,23 @@
         <a href="#visitors">Посетителям</a>
       </nav>
     </header>
-    <main class="content">
+    <main class="content" id="main">
       <h1 class="visually-hidden">Главная страница</h1>
-      <section aria-labelledby="afisha">
+      <section>
         <h2 class="visually-hidden" id="afisha">Афиша</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section aria-labelledby="events">
+      <section>
         <h2 id="events">Выставки и события</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section aria-labelledby="museum">
+      <section>
         <h2 id="museum">Музей</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section aria-labelledby="visitors">
+      <section>
         <h2 id="visitors">Онлайн-трансляции</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/jm3wA9Ixhag" title="Видео: «Смотреть и видеть». Дискуссия о фильме «Спаситель на продажу»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <div class="visually-hidden">Пока не готово</div>
       </section>
     </main>
@@ -71,6 +72,100 @@
 
     </footer>
   </div>
+  <div class="modal-window">
+    <div class="modal-window__content">
+      <button class="modal-window__close" type="button" aria-label="Закрыть"></button>
+      <h2 class="modal-window__title">Авторизация</h2>
+      <form class="modal-window__form" method="POST" action="/login/">
+        <label class="modal-window__label">
+          Логин
+          <input class="modal-window__field" autocomplete="username" type="text">
+        </label>
+        <label class="modal-window__label">
+          Пароль
+          <input class="modal-window__field" autocomplete="current-password" type="password">
+        </label>
+        <button class="modal-window__submit">Войти</button>
+      </form>
+    </div>
+  </div>
+  <style>
+    .modal-window {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #0004;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-window__content {
+      position: relative;
+      box-sizing: border-box;
+      width: 100%;
+      max-width: var(--modal-max-width);
+      padding: 4rem 9rem 5rem;
+      border-radius: 0.5rem;
+      background-color: #fff;
+    }
+
+    .modal-window__close {
+      display: flex;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 4rem;
+      height: 4rem;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+
+    .modal-window__close::before,
+    .modal-window__close::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 3rem;
+      height: 0.4rem;
+      border-radius: 0.2rem;
+      background-color: #000;
+      transform-origin: 50%;
+    }
+
+    .modal-window__close::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    .modal-window__close::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    .modal-window__title {
+      font-size: 3rem;
+    }
+
+    .modal-window__label {
+      display: block;
+      font-size: 2rem;
+      margin: 2rem 0;
+    }
+
+    .modal-window__field {
+      height: 4rem;
+      display: block;
+      width: 100%;
+      background: #F9F9FB;
+      border: 1px solid #C7D2E9;
+      box-sizing: border-box;
+      border-radius: 0.5rem;
+    }
+  </style>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
