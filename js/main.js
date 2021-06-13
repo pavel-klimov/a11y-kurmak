@@ -11,7 +11,13 @@ const openLoginModalOnClick = function (evt) {
 };
 
 loginButton.addEventListener('click', openLoginModalOnClick);
-loginButton.addEventListener('keypress', (evt) => {
+loginButton.addEventListener('keydown', (evt) => {
+  if (evt.which === 32) {
+    evt.preventDefault();
+  }
+});
+
+loginButton.addEventListener('keyup', (evt) => {
   if (evt.which === 32) {
     evt.stopPropagation();
     openLoginModalOnClick(evt);
