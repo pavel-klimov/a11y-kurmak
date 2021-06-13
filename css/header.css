@@ -1,12 +1,33 @@
 .header {
   display: grid;
-  gap: 0.5rem;
-  grid-template-areas: 'logo skip search lang login' 'nav nav nav nav nav';
+  gap: 4rem 1rem;
+  grid-template-areas: 'logo . search lang login' 'nav nav nav nav nav';
+  grid-template-columns: 12.5rem auto 18.5rem 9rem 3rem;
+  grid-template-rows: 3rem 2rem;
   align-items: center;
 }
 
 .header__skip-to-main {
-  grid-area: skip;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 12.5rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background: #C7D2E9;
+  border-radius: 0.25rem;
+  color: #000;
+  font-size: 1.25rem;
+  text-decoration: none;
+  transform: translateY(-6rem);
+  transition: transform var(--animation-duration-slow);
+}
+
+.header__skip-to-main:focus {
+  transform: translateY(0);
 }
 
 .header__logo {
@@ -15,17 +36,18 @@
 
 .header__search {
   grid-area: search;
+  width: 100%;
   position: relative;
-  margin: 0 0 0 auto;
 }
 
 .header__search-field {
-  width: 15rem;
+  width: 100%;
   height: 3rem;
   margin: 0;
-  padding: 0 3rem 0 0;
+  padding: 0 3rem 0 1rem;
   border: 1px solid #C7D2E9;
   border-radius: 1.5rem;
+  background: #F9F9FB;
 }
 
 .header__search-submit {
@@ -43,6 +65,7 @@
 .header__lang {
   grid-area: lang;
   display: flex;
+  height: 100%;
 }
 
 .header__lang-item {
@@ -50,10 +73,11 @@
   justify-content: center;
   align-items: center;
   width: 4rem;
-  margin: 0 0.25rem;
+  margin: 0 0.5rem 0 0;
   color: #000;
   background: #C7D2E9;
   border-radius: 0.25rem;
+  font-size: 1.5rem;
 }
 
 .header__login-button {
@@ -62,4 +86,17 @@
 
 .header__nav {
   grid-area: nav;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.header__nav-item {
+  font-size: 1.25rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.header__nav-item:hover,
+.header__nav-item:focus {
+  text-decoration: underline;
 }

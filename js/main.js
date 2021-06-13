@@ -8,7 +8,7 @@ loginButton.setAttribute('aria-haspopup','dialog');
 const openLoginModalOnClick = function (evt) {
   evt.preventDefault();
   loginModal.open();
-}
+};
 
 loginButton.addEventListener('click', openLoginModalOnClick);
 loginButton.addEventListener('keypress', (evt) => {
@@ -16,4 +16,4 @@ loginButton.addEventListener('keypress', (evt) => {
     evt.stopPropagation();
     openLoginModalOnClick(evt);
   }
-})
+});

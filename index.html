@@ -38,41 +38,78 @@
             <span aria-hidden="true">RU</span>
             <span class="visually-hidden">Русский</span>
         </span>
-        <a href="/en" class="header__lang-item" hreflang="en" aria-label="English" class="lang-button">EN</a>
+        <a href="/en" class="header__lang-item" lang="en" hreflang="en" aria-label="English" class="lang-button">EN</a>
       </nav>
       <a href="/login" class="header__login-button" aria-label="Авторизация">
         <svg width="48" height="48"><use xlink:href="#icon-login"></use></svg>
       </a>
       <nav class="header__nav">
-        <a href="#events">Выставки и события</a>
-        <a href="#museum">Музей</a>
-        <a href="#visitors">Посетителям</a>
+        <a href="#events" class="header__nav-item">Выставки и события</a>
+        <a href="#museum" class="header__nav-item">Музей</a>
+        <a href="#visitors" class="header__nav-item">Посетителям</a>
       </nav>
     </header>
     <main class="content" id="main">
       <h1 class="visually-hidden">Главная страница</h1>
-      <section>
+      <section class="content__section">
         <h2 class="visually-hidden" id="afisha">Афиша</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section>
-        <h2 id="events">Выставки и события</h2>
+      <section class="content__section">
+        <h2 class="content__title" id="events">Выставки и события</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section>
-        <h2 id="museum">Музей</h2>
+      <section class="content__section">
+        <h2 class="content__title" id="museum">Музей</h2>
         <div class="visually-hidden">Пока не готово</div>
       </section>
-      <section>
-        <h2 id="visitors">Онлайн-трансляции</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/jm3wA9Ixhag" title="Видео: «Смотреть и видеть». Дискуссия о фильме «Спаситель на продажу»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <section class="content__section">
+        <h2 class="content__title" id="visitors">Посетителям</h2>
+        <p>
+          Билеты на посещение <abbr title="Государственного музея изобразительных искусств">ГМИИ</abbr> им. А.С. Пушкина можно приобрести только на этом сайте или <a href="./tmp-page/">через официальных партнеров</a>. Музей не гарантирует подлинность билетов, купленных в других местах.
+          <a href="./tmp-page/">Больше информации о билетах</a>.
+        </p>
+        <h3 class="content__title">Онлайн-трансляции</h3>
+        <div class="content__video-wrap">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jm3wA9Ixhag" title="Видео: «Смотреть и видеть». Дискуссия о фильме «Спаситель на продажу»" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h3 class="content__title">Экскурсии и лекции в прямом эфире</h3>
+        <p>
+          С 1 июля вы можете присоединиться к нашим виртуальным мероприятиям — экскурсиям и лекциям для взрослых и детей, оплатив участие на сайте. Встречи будут проходить в прямом эфире на платформе Zoom; предусмотрен формат живого общения с возможностью задавать вопросы экскурсоводу (лектору).
+          <a href="./tmp-page/">Подробнее об онлайн мероприятиях</a>.
+        </p>
+        <p>
+Мы будем благодарны за любое <a href="./tmp-page/">пожертвование</a>. Все поступившие средства будут направлены на организацию онлайн-проектов для наших посетителей.
+        </p>
         <div class="visually-hidden">Пока не готово</div>
       </section>
     </main>
   </div>
   <div class="footer__wrap">
     <footer class="footer">
+      <h2 class="visually-hidden">Дополнительные данные</h2>
+      <div>
+        <a href="./tmp-page/">Посетителям с ограниченными возможностями</a>
+        <a href="./tmp-page/">Билеты и льготы</a>
+        <a href="./tmp-page/">Противодействие коррупции</a>
+        <nav aria-labelledby="nav-label-social-network">
+          <h3 id="nav-label-social-network" aria-label="Социальные сети">Соц. сети</h3>
 
+        </nav>
+      </div>
+      <div>
+        <h3>Подписка на новости</h3>
+        <form>
+          <label>
+            E-mail
+            <input type="email">
+          </label>
+          <label>
+            Согласен на обработку персональных данных
+            <input type="checkbox">
+          </label>
+        </form>
+      </div>
     </footer>
   </div>
 <script type="module" src="./js/main.js"></script>
