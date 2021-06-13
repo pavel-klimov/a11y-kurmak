@@ -118,3 +118,42 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 100%;
 }
+
+.footer {
+  display: flex;
+  gap: 1rem;
+  padding: 4.5rem 0 6rem;
+}
+
+.footer__column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0 0 1rem;
+}
+
+.footer__link-item {
+  color: #000;
+  text-decoration: none;
+  margin: 0 0 1rem;
+}
+
+.footer__link-item:hover,
+.footer__link-item:focus {
+  text-decoration: underline;
+}
+
+.footer__social-list {
+  display: flex;
+}
+
+.footer__social-item {
+  color: #000;
+  text-decoration: none;
+  margin: 0 0 1rem;
+}
