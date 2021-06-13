@@ -20,6 +20,11 @@ const LoginWindow = class {
       this._focusTrap.onEscCallback = this.close;
     }
     document.body.append(this._root);
+    const wrap = document.querySelector('.wrap')
+    if (wrap !== null) {
+      document.body.style.overflow = 'hidden';
+      wrap.style.overflow = 'auto scroll';
+    }
     document.addEventListener('keydown', this._focusTrap.onKeydownControl);
     this._closeButton.focus();
   }
@@ -29,6 +34,11 @@ const LoginWindow = class {
       this._root.remove();
       document.addEventListener('keydown', this._focusTrap.onKeydownControl);
       this._openingButton.focus();
+      const wrap = document.querySelector('.wrap')
+      if (wrap !== null) {
+        document.body.style.overflow = '';
+        wrap.style.overflow = '';
+      }
     }
   }
 

@@ -43,6 +43,7 @@ body {
   margin: 0;
   background-color: #ffffff;
   font-family: "Roboto", "Arial", sans-serif;
+  overflow: auto scroll;
 }
 
 svg, img {
