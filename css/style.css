@@ -26,6 +26,7 @@
 }
 
 html {
+  min-width: 50rem;
   height: 100%;
 }
 
@@ -63,35 +64,4 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
   width: 100%;
   max-width: var(--content-max-width, 100%);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-}
-
-.header__search {
-  position: relative;
-  margin: 0 0 0 auto;
-}
-
-.header__search-field {
-  width: 15rem;
-  height: 3rem;
-  margin: 0;
-  padding: 0 3rem 0 0;
-  border: 1px solid #C7D2E9;
-  border-radius: 1.5rem;
-}
-
-.header__search-submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 3rem;
-  height: 3rem;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: none;
 }

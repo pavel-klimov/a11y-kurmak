@@ -1,0 +1,65 @@
+.header {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas: 'logo skip search lang login' 'nav nav nav nav nav';
+  align-items: center;
+}
+
+.header__skip-to-main {
+  grid-area: skip;
+}
+
+.header__logo {
+  grid-area: logo;
+}
+
+.header__search {
+  grid-area: search;
+  position: relative;
+  margin: 0 0 0 auto;
+}
+
+.header__search-field {
+  width: 15rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0 3rem 0 0;
+  border: 1px solid #C7D2E9;
+  border-radius: 1.5rem;
+}
+
+.header__search-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.header__lang {
+  grid-area: lang;
+  display: flex;
+}
+
+.header__lang-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  margin: 0 0.25rem;
+  color: #000;
+  background: #C7D2E9;
+  border-radius: 0.25rem;
+}
+
+.header__login-button {
+  grid-area: login;
+}
+
+.header__nav {
+  grid-area: nav;
+}

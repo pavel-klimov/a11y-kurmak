@@ -8,6 +8,8 @@
   <meta name="description" content="Официальный сайт Государственного музея изобразительных искусств им. А.С. Пушкина (Москва), обладающего одним из крупнейших в России художественных собраний зарубежного искусства">
   <link rel="preload" href="./assets/roboto-regular.woff2" crossorigin="anonymous" as="font" type="font/woff2">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/modal-window.css">
 </head>
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
@@ -21,26 +23,27 @@
   </svg>
   <div class="wrap">
     <header class="header">
-      <a href="/">
+      <a href="#main" class="header__skip-to-main">Перейти к контенту</a>
+      <a href="/" class="header__logo">
         <img width="200" height="42" src="./assets/logo.svg" alt="Логотип пушкинского музея">
       </a>
       <form class="header__search" action="/search/" method="GET" role="search">
-        <input class="header__search-field" type="search" name="q">
+        <input class="header__search-field" type="search" aria-label="Текст поискового запроса" name="q">
         <button class="header__search-submit" aria-label="Искать">
           <svg width="48" height="48"><use xlink:href="#icon-search"></use></svg>
         </button>
       </form>
-      <nav aria-label="Выбрать язык">
-        <span class="lang-button active">
+      <nav class="header__lang" aria-label="Выбрать язык">
+        <span class="header__lang-item" class="lang-button active">
             <span aria-hidden="true">RU</span>
             <span class="visually-hidden">Русский</span>
         </span>
-        <a href="/en" hreflang="en" aria-label="English" class="lang-button">EN</a>
+        <a href="/en" class="header__lang-item" hreflang="en" aria-label="English" class="lang-button">EN</a>
       </nav>
-      <a href="/login" aria-label="Авторизация">
+      <a href="/login" class="header__login-button" aria-label="Авторизация">
         <svg width="48" height="48"><use xlink:href="#icon-login"></use></svg>
       </a>
-      <nav>
+      <nav class="header__nav">
         <a href="#events">Выставки и события</a>
         <a href="#museum">Музей</a>
         <a href="#visitors">Посетителям</a>
@@ -72,100 +75,6 @@
 
     </footer>
   </div>
-  <div class="modal-window">
-    <div class="modal-window__content">
-      <button class="modal-window__close" type="button" aria-label="Закрыть"></button>
-      <h2 class="modal-window__title">Авторизация</h2>
-      <form class="modal-window__form" method="POST" action="/login/">
-        <label class="modal-window__label">
-          Логин
-          <input class="modal-window__field" autocomplete="username" type="text">
-        </label>
-        <label class="modal-window__label">
-          Пароль
-          <input class="modal-window__field" autocomplete="current-password" type="password">
-        </label>
-        <button class="modal-window__submit">Войти</button>
-      </form>
-    </div>
-  </div>
-  <style>
-    .modal-window {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #0004;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-window__content {
-      position: relative;
-      box-sizing: border-box;
-      width: 100%;
-      max-width: var(--modal-max-width);
-      padding: 4rem 9rem 5rem;
-      border-radius: 0.5rem;
-      background-color: #fff;
-    }
-
-    .modal-window__close {
-      display: flex;
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      width: 4rem;
-      height: 4rem;
-      margin: 0;
-      padding: 0;
-      border: 0;
-      background: none;
-    }
-
-    .modal-window__close::before,
-    .modal-window__close::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 3rem;
-      height: 0.4rem;
-      border-radius: 0.2rem;
-      background-color: #000;
-      transform-origin: 50%;
-    }
-
-    .modal-window__close::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-    }
-
-    .modal-window__close::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-    }
-
-    .modal-window__title {
-      font-size: 3rem;
-    }
-
-    .modal-window__label {
-      display: block;
-      font-size: 2rem;
-      margin: 2rem 0;
-    }
-
-    .modal-window__field {
-      height: 4rem;
-      display: block;
-      width: 100%;
-      background: #F9F9FB;
-      border: 1px solid #C7D2E9;
-      box-sizing: border-box;
-      border-radius: 0.5rem;
-    }
-  </style>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
