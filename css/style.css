@@ -157,3 +157,46 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   margin: 0 0 1rem;
 }
+
+.subscription-form {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: 'email submit' 'legal legal';
+  grid-template-columns: auto min-content;
+}
+
+.subscription-form__email-field {
+  grid-area: email;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscription-form__field {
+  height: 2rem;
+  border-width: 0 0 1px 0;
+  background-color: transparent;
+}
+
+.subscription-form__legal-field {
+  grid-area: legal;
+  display: flex;
+}
+
+.subscription-form__checkbox {
+  order: -1;
+  padding: 0;
+  margin: 0 0.5rem 0 0;
+  width: 1.5rem;
+  height: 100%;
+}
+
+.subscription-form__submit {
+  grid-area: submit;
+  min-height: 2rem;
+  margin: auto 0 0;
+  padding: 0 2rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: #5D16D5;
+  color: #fff;
+}

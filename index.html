@@ -117,14 +117,14 @@
       </div>
       <div class="footer__column">
         <h3 class="footer__title">Подписка на новости</h3>
-        <form class="subscription-form">
-          <label class="subscription-form__label">
+        <form class="subscription-form" method="GET" action="./subscription/">
+          <label class="subscription-form__email-field">
             E-mail
-            <input type="email" class="subscription-form__field" required>
+            <input type="email" class="subscription-form__field" name="email" required>
           </label>
-          <label class="subscription-form__label">
+          <label class="subscription-form__legal-field">
             Согласен на обработку персональных данных
-            <input type="checkbox" class="subscription-form__checkbox">
+            <input type="checkbox" class="subscription-form__checkbox" name="legal" required>
           </label>
           <button class="subscription-form__submit">Подписаться</button>
         </form>
