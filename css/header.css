@@ -8,6 +8,7 @@
 }
 
 .header__skip-to-main {
+  --link-decoration-hover: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,6 +64,7 @@
 }
 
 .header__lang {
+  --link-decoration: underline;
   grid-area: lang;
   display: flex;
   height: 100%;
@@ -92,11 +94,4 @@
 
 .header__nav-item {
   font-size: 1.25rem;
-  color: #000;
-  text-decoration: none;
-}
-
-.header__nav-item:hover,
-.header__nav-item:focus {
-  text-decoration: underline;
 }
